@@ -1,10 +1,10 @@
 from selenium.webdriver.common.by import By
 from Pages.base_page import BasePage
 
-INPUT_LOGIN = (By.XPATH, '/html/body/big3-app-root/ng-scrollbar/div/div/div/div/ng-component/div/div[1]/div/div/ng-component/div/ng-component/div/form/div[1]/div[1]/label/input')
-INPUT_PASSWORD = (By.XPATH, "/html/body/big3-app-root/ng-scrollbar/div/div/div/div/ng-component/div/div[1]/div/div/ng-component/div/ng-component/div/form/div[1]/div[2]/label/input")
-BUTTON_SUBMIT = (By.XPATH, '/html/body/big3-app-root/ng-scrollbar/div/div/div/div/ng-component/div/div[1]/div/div/ng-component/div/ng-component/div/form/div[2]/button')
-LOGO = (By.XPATH, '/html/body/big3-app-root/ng-scrollbar/div/div/div/div/ng-component/div/big3-navbar-v/div/div[1]/a/big3-logo/div/h2')
+INPUT_LOGIN = (By.CSS_SELECTOR, "input[placeholder='Введите логин']")
+INPUT_PASSWORD = (By.CSS_SELECTOR, "input[placeholder='Введите пароль']")
+BUTTON_SUBMIT = (By.CSS_SELECTOR, "button[type='submit']")
+LOGO = (By.CSS_SELECTOR, "img[class='logo__img limit-logo-width']")
 
 class LoginPage(BasePage):
     def __init__(self, browser):
